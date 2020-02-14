@@ -1,0 +1,72 @@
+$(".spoiler-trigger").click(function() {
+	$(this).parent().next().collapse('toggle');
+});
+$('.select-category').on('click', function() {
+	var categoryId = $(this).attr('data-id');
+	$('.select-category').removeClass('active');
+	$(this).addClass('active');
+	if(categoryId == '-1')
+		$('.product-select').show();
+	else {
+		$('.product-select').not('.category-' + categoryId).hide();
+		$('.category-' + categoryId).show();
+	}
+});
+$(".share").on('click', function(e) {
+	$(".fab").removeClass("no");
+	if(e.target != this) return;
+	$('.share, .fab').toggleClass("active");
+});
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+$("#animeadd").submit(function() {
+	$.ajax({
+		type: "POST",
+		url: "/titles",
+		data: $(this).serialize()
+	}).done(function() {
+		$("#save").html("Добавлено!")
+		window.location.reload();
+	});
+	return false;
+});
+$("#note").submit(function() {
+	$.ajax({
+		type: "POST",
+		url: "/note",
+		data: $(this).serialize()
+	}).done(function() {
+		$("#save").html("Сохранено!")
+        window.location.reload();
+	});
+	return false;
+});
+$('#devpost').change(function(){
+	var state= $(this).prop('checked');
+	$.ajax({
+		type:'POST',
+		url:'/settings',
+		data:'dev='+state
+	});
+});
+$('#animepost').change(function(){
+	var state= $(this).prop('checked');
+		$.ajax({
+		type:'POST',
+		url:'/settings',
+		data:'anime='+state
+	});
+});
+$("#wallet").submit(function() {
+	$.ajax({
+		type: "POST",
+		url: "/wallet",
+		data: $(this).serialize()
+	}).done(function() {
+		$("#save").html("Сохранено!")
+		window.location.reload();
+	});
+	return false;
+});
+autosize(document.querySelectorAll('textarea'));

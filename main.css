@@ -1,0 +1,375 @@
+.toggle-control {
+	display: none;
+}
+input.toggle-control + label {
+	position: relative;
+	vertical-align: middle;
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+	background: #ddd;
+	border-radius: 60px;
+	cursor: pointer;
+	outline: none;
+	user-select: none;
+}
+input.toggle-control + label::before, input.toggle-control + label::after {
+	display: inline-block;
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	bottom: 1px;
+	right: 1px;
+	vertical-align: middle;
+	content: '';
+	transition: all 0.4s;
+}
+input.toggle-control + label::before {
+	background: #f1f1f1;
+	border-radius: 60px;
+}
+input.toggle-control + label::after {
+	width: 18px;
+	background: #fff;
+	border-radius: 100%;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+input.toggle-control:checked + label::before {
+	background: #34c85a;
+}
+input.toggle-control:checked + label::after {
+	margin-left: 20px;
+}
+.hentai {
+	width: 100%; /* Ширина */
+	height: 100%; /* Высота */
+	margin: 1rem auto; /* ????? */
+	text-transform: uppercase; /* ????? */
+	border: 1px solid black; /* Установка границы блока */
+	border-radius: 5px; /* Установка радиуса границы блока */
+	padding: 5px; /* Установка расстояния от внутреннего края рамки */
+}
+.note {
+	width: 90%;
+}
+.add {
+	float: left;
+    width: 100%;
+	text-align: center;
+}
+small {
+	vertical-align: super;
+}
+.searchhash {
+	width: 400px;
+}
+.hash {
+	padding: 5%;
+}
+.border {
+	border: 1px solid black;
+}
+.vk img {
+	border-radius: 10px; /* Установка радиуса границы блока */
+	width: 55px; /* Ширина */
+	height: 55px; /* Высота */
+}
+.vk {
+	text-align: right;
+}
+.authvk {
+	color: white;
+	vertical-align: bottom;
+	font-size: 20px;
+}
+.tools a {
+	text-decoration: none;
+	outline: none;
+	display: inline-block; /* Блоки идут в строку */
+	width: 140px;
+	height: 45px;
+	line-height: 45px;
+	border-radius: 45px;
+	margin: 10px 20px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 11px;
+	text-transform: uppercase;
+	text-align: center; /* Установка текста по центру */
+	letter-spacing: 3px;
+	font-weight: 600;
+	color: #524f4e;
+	background: white;
+	box-shadow: 0 8px 15px rgba(0,0,0,.1);
+	transition: .3s;
+}
+.tools a:hover {
+	background: #2EE59D;
+	box-shadow: 0 15px 20px rgba(46,229,157,.4);
+	color: white;
+	transform: translateY(-7px);
+}
+.full {
+	width: 100%; /* Ширина */
+	height: 100%; /* Высота */
+}
+.left {
+    float: left;
+    width: 50%;
+}
+.right {
+    float: right;
+    width: 50%;
+}
+.rarity {
+	margin-left: 25px;
+}
+.rarity a {
+	text-decoration: underline;
+	color: #3f5373;
+}
+.noselect {
+	/* Блокировка выделения на всех браузерах */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.nomove {
+	/* Блокировка перемещения объектов на всех браузерах */
+	pointer-events: none;
+}
+br {
+	/* Блокировка выделения на всех браузерах */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+}
+::-webkit-scrollbar {
+	display: none; /* Блокировка ползунка в Chrome */
+}
+body {
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(SUV4.gif); /* Установка фона и затемнения */
+	background-position: center; /* Установка фона по центру */
+	background-size: cover; /* Установка фона под размер контейнера с сохранением пропорций */
+	background-attachment: fixed; /* Блокировка прокрутки фона */
+	width: 100%; /* Ширина */
+	height: 100%; /* Высота */
+	-ms-overflow-style: none; /* Блокировка ползунка в IE */
+	scrollbar-width: none; /* Блокировка ползунка в Firefox и Yandex */
+	overflow: -moz-scrollbars-none; /* Блокировка ползунка в старых версиях Firefox */
+	scrollbar-width: none; /* Блокировка ползунка в остальных браузерах */
+	font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif; /* Шрифт */
+}
+.main {
+	margin-left: 15%;
+	margin-right: 15%;
+}
+.name {
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 3%;
+	text-align: center; /* Установка текста по центру */
+}
+.name img {
+	width: 100%; /* Ширина */
+	height: 100%; /* Высота */
+}
+.links {
+	padding: 15px; /* Установка расстояния от внутреннего края рамки */
+	margin-top: 1%;
+	background-color: #006400; /* Установка цвета заднего фона */
+	border-radius: 5px 5px 0 0; /* Установка радиуса границы блока */
+}
+.links li {
+	display: inline; /* Тег li по горизонтали */
+}
+.links-item {
+	margin-right: 3px;
+	text-decoration: none; /* Убираем подчёркивание ссылки */
+	color: White; /* Установка цвета текста */
+	transition: all 0.4s; /* Установка задержки анимации */
+	text-transform: uppercase; /* ????? */
+	padding: 15px; /* Установка расстояния от внутреннего края рамки */
+	border-radius: 3px 3px 3px 3px; /* Установка радиуса границы блока */
+	display: inline-block; /* Блоки идут в строку */
+}
+.links-item:hover {
+	margin-right: 3px;
+	text-decoration: none; /* Убираем подчёркивание ссылки */
+	color: white; /* Установка цвета текста */
+	transition: all 0.3s; /* Установка задержки анимации */
+	text-transform: uppercase; /* ????? */
+	padding: 15px; /* Установка расстояния от внутреннего края рамки */
+	border-radius: 3px 3px 3px 3px; /* Установка радиуса границы блока */
+	display: inline-block; /* Блоки идут в строку */
+	background-color: rgba(255, 255, 255, 0.2); /* Установка цвета заднего фона */
+}
+.links-item-active {
+	background-color: rgba(255, 255, 255, 0.2); /* Установка цвета заднего фона */
+}
+.content {
+	padding: 2% 1% 1% 1%; /* Установка расстояния от внутреннего края рамки */
+	overflow: hidden; /* Скрываем ползунок */
+	background-color: white; /* Установка цвета заднего фона */
+	border-radius: 0 0 5px 5px; /* Установка радиуса границы блока */
+    width: 100%; /* Ширина */
+    word-wrap: break-word; /* Перенос слов */ 
+	font-size: 100%;
+}
+.footer {
+	float: left;
+	width: 100%;
+}
+.footer a {
+	padding: 0 35px; /* Установка расстояния от внутреннего края рамки */
+}
+.underline {
+	background-color: white; /* Установка цвета заднего фона */
+	font-size: 130%; /* Установка размера шрифта */
+	text-align: center; /* Установка текста по центру */
+}
+.underline a {
+	display: inline-block; /* Блоки идут в строку */
+	color: black; /* Установка цвета текста */
+	line-height: 1; /* ????? */
+	text-decoration: none; /* убираем подчёркивание ссылки */
+	cursor: pointer; /* Обозначение курсора */
+	opacity: 1; /* ????? */
+}
+.underline a:after {
+	background-color: black; /* Установка цвета заднего фона */
+	display: block; /* Обозначение элемента как блок */
+	content: ""; /* ????? */
+	height: 2px; /* Высота */
+	width: 0%; /* Ширина */
+	-webkit-transition: width .3s ease-in-out; /* Установка задержки анимации */
+	-moz--transition: width .3s ease-in-out; /* Установка задержки анимации */
+	transition: width .3s ease-in-out; /* Установка задержки анимации */
+}
+.underline a:hover:after, .underline a:focus:after {
+	width: 100%; /* Ширина */
+}
+.underlineblue {
+	font-size: 20px;
+}
+.underlineblue a {
+	display: inline-block;
+	color: blue;
+	line-height: 1;
+	text-decoration: none;
+	cursor: pointer;
+	opacity: 1;
+}
+.underlineblue a:after {
+	background-color: blue;
+	display: block;
+	content: "";
+	height: 2px;
+	width: 0%;
+	-webkit-transition: width .3s ease-in-out;
+	-moz--transition: width .3s ease-in-out;
+	transition: width .3s ease-in-out;
+}
+.underlineblue a:hover:after, .underlineblue a:focus:after {
+	width: 100%;
+}
+.table {
+	text-align: center;
+	table-layout: fixed;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent
+}
+.nick {
+    text-align: center;
+	width: 8%;
+}
+.pass {
+    text-align: center;
+	width: 44%;
+}
+.email {
+    text-align: center;
+	width: 22%;
+}
+.ip {
+    text-align: center;
+	width: 13%;
+}
+.db {
+    text-align: center;
+	width: 13%;
+}
+@media (max-width:1024px) {
+	.main {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	.name {
+		margin-top: 5%;
+	}
+	.underline {
+		font-size: 80%; /* Установка размера шрифта */
+	}
+	h1,h2,h3,h4,h5,h6 {
+		font-size: 75%;
+	}
+	.vk img {
+		width: 33px; /* Ширина */
+		height: 33px; /* Высота */
+	}
+	.authvk {
+		font-size: 12px;
+	}
+	.links {
+		text-align: center; /* Установка текста по центру */
+		padding: 9px; /* Установка расстояния от внутреннего края рамки */
+	}
+	.links-item {
+		padding: 8px;
+		font-size: 60%;
+	}
+	.links-item:hover {
+		padding: 8px;
+		font-size: 60%;
+	}
+	.nick img {
+		width: 17px;
+		height: 17px;
+	}
+	.nick {
+		text-align: center;
+		width: 15%;
+		font-size: 50%;
+	}
+	.pass {
+		text-align: center;
+		width: 30%;
+		font-size: 50%;
+	}
+	.email {
+		text-align: center;
+		width: 20%;
+		font-size: 50%;
+	}
+	.ip {
+		text-align: center;
+		width: 20%;
+		font-size: 50%;
+	}
+	.db {
+		text-align: center;
+		width: 15%;
+		font-size: 50%;
+	}
+	.searchhash {
+		width: 150px;
+    }
+}
